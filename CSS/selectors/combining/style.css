@@ -1,0 +1,15 @@
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.outer {
+    border:1px dashed tomato;
+    margin:5px;
+    padding: 5px;
+}
+
+div.outer h2 {
+    color:blue
+}

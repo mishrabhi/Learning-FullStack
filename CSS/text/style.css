@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Aerial'
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 900; /* 100 - 900 or bold bolder lighter*/
+}
+
+p {
+    font-size: 16px;
+    font-style: normal;
+    font-variant: none;
+    line-height: 15px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+.para {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.25em;
+    padding: 0 0 1em 0;
+    
+    margin:5px;
+    text-align: justify; /* justify left right center*/
+}

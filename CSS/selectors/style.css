@@ -1,0 +1,33 @@
+/* Universal Selector */
+
+* {
+   margin:0px;
+   padding: 0px;
+}
+
+/* typed selector */
+
+h1 {
+    color:tomato;
+}
+
+/* p {
+    color:yellowgreen
+} */
+
+/* class */
+
+.firstPara {
+    color:brown;
+}
+
+.space {
+    margin:4px;
+    padding:5px;
+}
+
+/* ID selector */
+
+#mypara {
+    color:burlywood
+}

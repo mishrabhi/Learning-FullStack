@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="html.html" method="GET">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email"  id="email" name="email" required>
+        <br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" required minlength="3" maxlength="12">
+        <br>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+        <br>
+        <label for="dob">DOB</label>
+        <input type="date" name="dob" id="dob">
+
+
+        <br>
+        <label for="desc">Description</label>
+        <input type="text" name="desc" id="desc" required>
+
+        <label for="resume">Resume</label>
+        <input type="file" name="resume" id="resume">
+        <br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other
+        <br>
+        <label for="">Education</label>
+
+        <input type="checkbox" name="education" value="HS">HS
+        <input type="checkbox" name="education" value="PU">PU
+        <input type="checkbox" name="education" value="Graduate">Graduate
+
+        <label for="">Country</label>
+
+        <select name="country">
+            <option value="India">India</option>
+            <option value="US">US</option>
+            <option value="Australia">Australia</option>
+            <option value="England">England</option>
+        </select>
+
+        <br>
+        <label for="">Address</label>
+
+        <textarea name="address" rows="6" cols="20"></textarea>
+
+        <br>
+        <input type="hidden" name="secret" id="" value="secret">
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

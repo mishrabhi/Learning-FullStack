@@ -1,0 +1,30 @@
+/* 
+Univarsal ==> 0
+
+typed selector ==> 10
+
+class ==> 100
+
+ID selector ==> 500
+
+inline css ==> 1000
+
+*/
+
+* {
+    color:blue
+}
+
+h1 {
+    color:blueviolet
+}
+
+
+
+#myhead {
+    color:aquamarine
+}
+
+.head1 {
+    color: brown;  
+}
