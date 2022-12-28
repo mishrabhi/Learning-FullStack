@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: aqua;
+    width: 100%;
+    padding: 16px;
+}
+
+li {
+    list-style: none;
+    padding: 10px 10px;
+    display: inline;
+}
+
+.box {
+    width: 50%;
+    border: 1px solid white;
+    padding: 10px;
+    float: left;
+    margin: 0px 5px;
+    text-align: justify;
+}
+
+.clear {
+    clear: both;  
+}
+
+.box2 h2 {
+    margin: 5px;
+    padding: 3px;
+    text-align: center;
+}
+
+.box2 {
+    margin: 5px;
+    padding: 10px;
+}
+
+.Bigbox h2 {
+    text-align: center;
+}

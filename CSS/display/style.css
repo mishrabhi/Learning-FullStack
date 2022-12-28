@@ -1,0 +1,33 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* inline, block, none*/
+
+
+
+nav {
+    background-color: aqua;
+    width: 100%;
+    padding: 16px;
+}
+
+li {
+    list-style: none;
+    padding: 10px 10px;
+    display: inline;
+}
+
+span {
+    display: block;
+    margin: 20px 20px
+}
+
+h1 {
+    display: none;
+    /* visibility: hidden; */
+}

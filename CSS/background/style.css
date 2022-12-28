@@ -1,0 +1,16 @@
+/* Color Codes == HEX Code 
+    RGB (red green blue) - values starts from 0-255
+
+*/
+
+.divone {
+    /* background-color: #c47627 */
+    background-color: rgb(255, 100, 80)
+}
+
+.secondDiv {
+    background-image: url(../../media/images/mountain.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    /* background-size: cover; contain, cover */
+}

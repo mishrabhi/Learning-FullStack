@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding: 20px;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+}
+
+ul li a {
+    padding: 15px;
+    text-decoration: none;
+}
+
+@media print {
+    header {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

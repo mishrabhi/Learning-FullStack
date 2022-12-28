@@ -1,0 +1,12 @@
+media-type and media-feature
+
+screen      width
+print       height
+handheld    min-width
+tv          min-height
+projector   max-width
+all         max height
+
+@media screen and (max-width) {
+    
+}
