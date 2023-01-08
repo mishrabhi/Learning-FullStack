@@ -43,3 +43,7 @@ li {
 .Bigbox h2 {
     text-align: center;
 }
+
+.BigBox {
+    float: left;
+}
