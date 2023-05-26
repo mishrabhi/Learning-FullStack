@@ -74,14 +74,29 @@ console.log(`Even numbers in the given array are ${evenNum}`);   // Even numbers
 console.log(revString);
 
 // Remove duplicate words
-var str = "Believe, whatever you feel good on, believe on it. Believe is good way of having self confidence on yourself."
+// var str = "Believe, whatever you feel good on, believe on it. Believe is good way of having self confidence on yourself."
+
+
 
 // remove duplicate characters
 var str2 = "Hello I am good person"
 
+
 // Reverse an array without creating a new one
 
 // WAP to find some of prime numbers b/w 1 to 1000
+var count = 0
+var i , j
+for(var j = 2; j <=100; j++){
+    for(i=1; i<=j; i++){
+        if(j % i == 0)
+        count++
+    }
+    if (count==2)
+    console.log(j)
+    count=0
+}
+
 
 // WAP to generate first n fibonacci numbers
 
