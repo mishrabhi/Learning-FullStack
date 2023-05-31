@@ -108,32 +108,36 @@ function newArray(arr) {
 console.log(newArray([1, 2, 3, 4, 5]));
 
 
-// WAF to return a factorial of a number.
+// 10. WAF to return a factorial of a number.
 
-
-
-// WAF to print table from a given number till 10.
-
-function factorial(n) {
-    if (n < 0) {
-        return 'number cannot be less than 0'
-    }
-    if (n == 0 || n == 1) {
-        return 1;
+function factorial(n){
+    var res = 1;
+    if(n == 0 || n == 1){
+        return res;
     } else {
-        return n * factorial(n-1);
+        for(var i = n; i >= 1; i--){
+            res = res * i;
+        }
+        return res;
     }
 }
-console.log(factorial(8));   //40320
+console.log(factorial(5));
 
-// function newtable(num) {
-//     for(var i = num; i <= 10; i++) {
-//         for(var j = num; j <= 10; j++){
-//             return `$(i) + "*" + $(j) + "=" + i*j`
-//         }       
-//     }  
-// }
-// console.log(newtable(3));
+
+// 11. WAF to print table from 2 to a given number.
+function newtable(num) {
+    for(var i = 2; i <= num; i++) {
+        for(var j = 1; j <= 10; j++){
+            console.log(`${i} *  ${j} = ${i*j}`) 
+        }       
+    }  
+}
+newtable(7);
+
+
+
+
+
 
 
 

@@ -51,3 +51,58 @@ add(arguments);
 ```
 
 
+
+# Function are data
+
+* Functions are data, which means you can create a function and assign it to a variable
+* This way of defining a function is sometimes referred to as function literal notation.
+* A function expression can optionally have a name, in which case it becomes a named function expression(NFE).
+
+
+# Anonymous Function:
+* As you know function expression can be defined without name, this is also often called an anonymous function, especially when such a function expression used even without assigning it to a variable.
+
+* There can be two elegant uses for such anonymous function.
+
+### 1. Self Executing or Immediate Functions
+* You can define an anonymous function and use it right away.
+### 2. Callbacks
+* As a function is just like any other data assigned to a variable, it can be defined, copied and also passed as an argument to other functions.
+
+
+# Scoping
+*  It is a region of the program where a variable can be accessed. In other words, scope determines the accessibility/visibility of a variable.
+
+* There’re 3 kinds of scopes in JavaScript:
+
+* 1. **Global scope:**   Variables declared outside of all functions are known as global variables and in the global scope. Global variables are accessible anywhere in the program.
+
+* 2. **Function scope:** Variables that are declared inside a function are called local variables and in the function scope. Local variables are accessible anywhere inside the function. 
+
+* 3. **Block scope:** Variable that is declared inside a specific block & can’t be accessed outside of that block. In order to access the variables of that specific block, we need to create an object for it.
+
+* The code inside a function has access to:
+
+(i)  _the function’s arguments._
+
+(ii)_local variables declared inside the function._
+
+(iii)_variables declared in its parent function’s scope._
+
+(iv) _global variables._
+
+***Note: Block scope is related to variables declared with `let` and `const` only. Variables declared with `var` do not have block scope.***
+
+Example:
+
+```
+{
+    let a = 3;
+    var b = 2;
+}
+
+console.log(a);   //Uncaught ReferenceError
+console.log(b);   // 2
+```
+
+
