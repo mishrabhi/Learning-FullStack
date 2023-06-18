@@ -13,7 +13,7 @@ console.log(oddOrEven(4));
 
 for (var i = 1; i <= 100; i += 2) {
     console.log(i);
-    // if(i %2 == 0) {
+    // if(i % 2 != 0) {
     //     console.log(i)
     // }
 }
@@ -75,7 +75,7 @@ function remSpace(str) {
     // return str.split(' ').join('')
 }
 
-console.log(remSpace(str));
+console.log(remSpace(str));      //ThisisApple
 
 
 // 8.WAF which return boolean value when a number is divisible by 10
@@ -133,6 +133,72 @@ function newtable(num) {
     }  
 }
 newtable(7);
+
+
+// Callback AND Higher-Order Functions:
+
+//12. Create a function 'addTwo' that accepts one input and adds 2 to it.
+
+function addTwo (a) {
+    return a + 2;
+}
+console.log(addTwo(2));  //4
+
+//13. Create a function addS that accepts one input and adds an "s" to it.
+
+function addS (a) {
+    return a + 's';
+}
+console.log(addS('Abhi'));   //Abhis
+
+
+//14. Create a function called map that takes two inputs:
+//1.an array of numbers (a list of numbers)
+//2.a 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
+//Have map return a new array filled with numbers that are the result of using the 'callback' function on each element of the input array.
+
+function map(array, callback) {
+    var newArray = [];
+
+    for(var i = 0; i < array.length; i++){
+        newArray.push(callback(array[i]));
+    }
+    return newArray;
+}
+function multiplyByTwo(num) {
+    return num * 2;
+}
+var numbers = [1,2,3,4,5];
+var res = map(numbers, multiplyByTwo);
+console.log(res);       // [2,4,6,8,10] 
+
+
+//15. The function forEach takes an array and a callback, and runs the callback on each element of the array. forEach does not return anything.
+
+function forEach(array, callback) {
+    var alpahbet = [];
+
+    for(var i = 0; i < array.length; i++){
+        alpahbet.push(callback(array[i]));
+    }
+    return alpahbet;
+}
+function letters(arr){
+    var newArr = arr.split(' ')
+    console.log(newArr);
+    return newArr.join('')
+}
+var arr = ['a', 'b', 'c'];
+var res = forEach(arr, letters);
+console.log(res);
+
+
+
+
+
+
+
+
 
 
 

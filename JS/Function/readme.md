@@ -106,3 +106,48 @@ console.log(b);   // 2
 ```
 
 
+# Hoisting:
+
+* JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code.
+
+* Only the declaration is hoisted, meaning only the presence of variable is moved to the top.
+
+
+# Higher Order Function
+
+* In Javascript, functions can be assigned to variables in the same way that strings or arrays can. They can be passed into other functions as parameters or returned from them as well.
+
+* A “higher-order function” is a function that accepts functions as parameters and/or returns a function.
+
+
+
+# Fat-Arrow Function:
+* An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:
+
+1. Arrow functions don't have their own bindings to *this*, *arguments*, or *super*, and should not be used as *methods*.
+
+2. Arrow functions cannot be used as constructors. Calling them with new throws a *TypeError*.
+
+Syntax:
+```
+var addition = (a,b) => {
+  return a + b;
+}
+```
+
+# this keyword:
+
+* In simple way we can say, *this* refers to current Object.
+
+* *this* is not an author-time binding but a runtime binding, it is actually a binding that is made when a function is invoked, and what is references is determined entirely by the call-site(how the function is called) where the function is called.
+```
+function foo() {
+    this.name = 'ashu'
+}
+
+foo();
+```
+
+* In the upper example *this* keyword will create a global variable *name*. Meaning this keyword is not referencing to itself(foo).
+
+

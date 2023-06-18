@@ -98,4 +98,44 @@ console.log(lappy.price);    //1000
 
 console.log(lappy.constructor === Gadget);   //true
 console.log(lappy.constructor.prototype.price);  //1000
+
+
+//Now, lets take this lookup one step further. Every object has a constructor. The prototype is an object, so it must have a constructor too, which, in turn, has a prototype. You can got up the prototype chain, and you will eventually end up with the build-in Object() object, whichid the highest-level parent.
+
+//In practice, this means that if you try lappy.ToString() and lappy doesn't have its own toString() method, and its prototype doesn't either, in the end, you'll get the Object's toString() method:
+console.log(typeof lappy.price)    //number
+console.log(lappy.toString());   //[object Object]
+console.log(typeof lappy.price.toString());    //String
+
+console.log(lappy.hasOwnProperty('name'));   //true
+console.log(lappy.hasOwnProperty('toString'));    //false
+console.log(lappy.constructor.hasOwnProperty('toString'));  //false
+
+console.log(lappy.constructor.prototype.hasOwnProperty('toString'));   //false
+
+console.log(Object.hasOwnProperty('toString'));     //false
+
+console.log(Object.prototype.hasOwnProperty('tostring'));   //false
+
+
+
+//Augmenting built-in objects
+
+// THe objects created by built-in function, such as Array, String and even Object and Function, can be augmented(or inhanced) through the use of prototypes.
+
+// This means you can add new methods to the Array prototype, and in this way you can make them available to all arrays.
+
+// Lets add sum() to Array prototype to get addition of all the elements of a array
+
+Array.prototype.add = function() {
+    var res = 0;
+    for(var i = 0; i<this.length; i++){
+        res += this[i]
+    }
+    return res;
+}
+var arr = [1,2,3]
+console.log(arr.add());    //6
+
+
   

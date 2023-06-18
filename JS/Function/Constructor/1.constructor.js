@@ -22,3 +22,5 @@ console.log(person2.age);     //23
 console.log(person1.desc());   //I am Ashu and my age is 28
 
 console.log(Person.constructor);    // [Function: Function]
+
+
