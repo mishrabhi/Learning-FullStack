@@ -41,13 +41,15 @@ function Gadget(name, color) {
     }
 }
 
+//Adding prototype methods and properties
+
 Gadget.prototype.price = 1000;
 Gadget.prototype.rating = 4;
 Gadget.prototype.getInfo = function() {
     return `Rating is ${this.rating} and Price is ${this.price}`;
 }
 
-// Using the protitype's method and properties
+// Using the prototype's method and properties
 
 // All the methods and properties you added to the prototype are available as soon as you create a new object using the constructor
 
@@ -100,7 +102,7 @@ console.log(lappy.constructor === Gadget);   //true
 console.log(lappy.constructor.prototype.price);  //1000
 
 
-//Now, lets take this lookup one step further. Every object has a constructor. The prototype is an object, so it must have a constructor too, which, in turn, has a prototype. You can got up the prototype chain, and you will eventually end up with the build-in Object() object, whichid the highest-level parent.
+//Now, lets take this lookup one step further. Every object has a constructor. The prototype is an object, so it must have a constructor too, which, in turn, has a prototype. You can got up the prototype chain, and you will eventually end up with the build-in Object() object, which is the highest-level parent.
 
 //In practice, this means that if you try lappy.ToString() and lappy doesn't have its own toString() method, and its prototype doesn't either, in the end, you'll get the Object's toString() method:
 console.log(typeof lappy.price)    //number

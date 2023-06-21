@@ -10,6 +10,7 @@
 
 ### There are two ways to access properties:
 > Dot Notation
+
 > Bracket Notation
 
 Syntax:

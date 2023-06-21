@@ -1,4 +1,4 @@
-# Conditional Statements and Iteration (loops)
+# Conditional Statements 
 
 ## if-else:
 

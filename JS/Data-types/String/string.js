@@ -61,6 +61,8 @@ console.log(text.length)   //26
 
 //Slice:
 
+//Note that the second parameter you pass is the end position, not the length of the piece
+
 let string = "Apple, Banana, Kiwi";
 console.log(string.slice(7,13))   // Banana
 
@@ -77,6 +79,41 @@ console.log(text.toLowerCase())    // abcdefghijklmnopqrstuvwxyz
 let text1 = "Please visit Microsoft!";
 let newText = text1.replace("Microsoft", "Google");
 console.log(newText)  // Please Visit Google!
+
+
+// Concat:
+
+console.log(primitive.concat("es"))  // Helloes
+
+
+// Slice:
+
+// It divides the each word of a string into characters
+//return array
+
+var fullName = "Hello my name is Abhishek"  // This will divide the string into characters
+console.log(fullName.split(''))
+//Output:
+// [
+//     'H', 'e', 'l', 'l', 'o', ' ',
+//     'm', 'y', ' ', 'n', 'a', 'm',
+//     'e', ' ', 'i', 's', ' ', 'A',
+//     'b', 'h', 'i', 's', 'h', 'e',
+//     'k'
+//   ]
+
+console.log(fullName.split(' '))   // This will divides the given string from spaces
+// [ 'Hello', 'my', 'name', 'is', 'Abhishek' ]
+
+
+console.log(fullName.split('a'))  // [ 'Hello my n', 'me is Abhishek' ]
+
+
+
+
+
+  
+
 
 
 

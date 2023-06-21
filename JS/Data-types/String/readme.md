@@ -45,6 +45,22 @@ A string is converted to lower case with toLowerCase()
 The replace() method replaces a specified value with another value in a string.
 
 
+### 6. Concat:
+The concat() glues strings together, in the same way in which the + operator does for primitive strings.
+
+
+### Split:
+The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+
+Syntax:
+```
+split(separator)
+split(separator, limit)
+```
+
+
+
+
 
 
 

@@ -127,4 +127,27 @@ var totalYear = inventors.reduce(
 console.log(totalYear);    //861
 
 
+
+
+//Add a method to array which behaves like map:
+//creating a method mymap which will acts like map method
+
+Array.prototype.mymap = function(callback) {
+    console.log('this', this)
+    var newArr = []
+    for(var i = 0; i< this.length; i++) {
+        newArr.push(callback(this[i],i,this))
+    }
+    return newArr;
+}
+var mineFunc = inventors.mymap((ele, i, arr) => {
+    return `${ele.first} ${ele.last}`
+})
+console.log(mineFunc);
+
+
+
+
+
+
   

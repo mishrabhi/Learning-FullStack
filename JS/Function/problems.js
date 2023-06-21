@@ -184,8 +184,7 @@ function forEach(array, callback) {
     return alpahbet;
 }
 function letters(arr){
-    var newArr = arr.split(' ')
-    console.log(newArr);
+    var newArr = arr.split(' ');
     return newArr.join('')
 }
 var arr = ['a', 'b', 'c'];
