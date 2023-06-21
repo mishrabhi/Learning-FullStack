@@ -1,3 +1,4 @@
+
 // tag Names
 
 let headings = document.getElementsByTagName('h1');
@@ -48,5 +49,6 @@ console.log(inpt)
 
 
 document.querySelector('body').style.backgroundColor = 'blue'
+
 
 
