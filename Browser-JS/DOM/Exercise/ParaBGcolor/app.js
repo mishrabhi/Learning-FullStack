@@ -39,5 +39,3 @@ setInterval(changeColor, 1000)
 
 
 
-// var a = `rgb(${parseInt(RandomNumber(1,255))},${parseInt(RandomNumber(1,255))},${parseInt(RandomNumber(1,255))})`
-// console.log(a);
