@@ -1,6 +1,6 @@
 // We are getting this list from backend
 
-let hobbies = ['Coding','Riding','Gardening','TEstts'];
+let hobbies = ['Coding','Riding','Gardening','Lifting'];
 let hobbyList = document.querySelector('#hobby');
 
 hobbies.forEach(ele => {
