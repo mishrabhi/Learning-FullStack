@@ -128,6 +128,14 @@ console.log(b);   // 2
 
 2. Arrow functions cannot be used as constructors. Calling them with new throws a *TypeError*.
 
+3. When you need multiple arguments, you need to wrap the argument list in braces:
+
+    No parameters: () => {...}
+
+    One parameter: a => {...}
+
+    More than one parameters: (a,b) => {...}
+
 Syntax:
 ```
 var addition = (a,b) => {
