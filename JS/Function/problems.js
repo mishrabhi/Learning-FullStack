@@ -100,7 +100,7 @@ function newArray(arr) {
         if (arr[i] % 2 == 0) {
             newArr.push(arr[i] * 2);
         } else {
-            newArr.push(arr[i]*3);
+            newArr.push(arr[i] * 3);
         }
     }
     return newArr;
@@ -110,12 +110,12 @@ console.log(newArray([1, 2, 3, 4, 5]));
 
 // 10. WAF to return a factorial of a number.
 
-function factorial(n){
+function factorial(n) {
     var res = 1;
-    if(n == 0 || n == 1){
+    if (n == 0 || n == 1) {
         return res;
     } else {
-        for(var i = n; i >= 1; i--){
+        for (var i = n; i >= 1; i--) {
             res = res * i;
         }
         return res;
@@ -126,11 +126,11 @@ console.log(factorial(5));
 
 // 11. WAF to print table from 2 to a given number.
 function newtable(num) {
-    for(var i = 2; i <= num; i++) {
-        for(var j = 1; j <= 10; j++){
-            console.log(`${i} *  ${j} = ${i*j}`) 
-        }       
-    }  
+    for (var i = 2; i <= num; i++) {
+        for (var j = 1; j <= 10; j++) {
+            console.log(`${i} *  ${j} = ${i * j}`)
+        }
+    }
 }
 newtable(7);
 
@@ -139,17 +139,18 @@ newtable(7);
 
 //12. Create a function 'addTwo' that accepts one input and adds 2 to it.
 
-function addTwo (a) {
+function addTwo(a) {
     return a + 2;
 }
 console.log(addTwo(2));  //4
 
 //13. Create a function addS that accepts one input and adds an "s" to it.
 
-function addS (a) {
+function addS(a) {
     return a + 's';
 }
 console.log(addS('Abhi'));   //Abhis
+
 
 
 //14. Create a function called map that takes two inputs:
@@ -160,7 +161,7 @@ console.log(addS('Abhi'));   //Abhis
 function map(array, callback) {
     var newArray = [];
 
-    for(var i = 0; i < array.length; i++){
+    for (var i = 0; i < array.length; i++) {
         newArray.push(callback(array[i]));
     }
     return newArray;
@@ -168,9 +169,10 @@ function map(array, callback) {
 function multiplyByTwo(num) {
     return num * 2;
 }
-var numbers = [1,2,3,4,5];
+var numbers = [1, 2, 3, 4, 5];
 var res = map(numbers, multiplyByTwo);
 console.log(res);       // [2,4,6,8,10] 
+
 
 
 //15. The function forEach takes an array and a callback, and runs the callback on each element of the array. forEach does not return anything.
@@ -178,18 +180,112 @@ console.log(res);       // [2,4,6,8,10]
 function forEach(array, callback) {
     var alpahbet = [];
 
-    for(var i = 0; i < array.length; i++){
+    for (var i = 0; i < array.length; i++) {
         alpahbet.push(callback(array[i]));
     }
     return alpahbet;
 }
-function letters(arr){
+function letters(arr) {
     var newArr = arr.split(' ');
     return newArr.join('')
 }
 var arr = ['a', 'b', 'c'];
 var res = forEach(arr, letters);
 console.log(res);
+
+
+
+//16. Create a function  in javascript with two arguments that will return an array of the first n multiples of x.
+// Assume both the given number and the number of times to count will be positive numbers greater than 0.
+
+function countBy(x, n) {
+    let z = [];
+    for (let i = 1; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+result = countBy(2, 5);
+console.log(result);      // z = [2,4,6,8,10]
+
+
+
+//17. Implement a function which convert the given boolean value into its string representation.
+
+function booleanToString(b) {
+    return b.toString();
+}
+result = booleanToString(true);
+console.log(result);   // "true"
+
+
+
+//18. Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+//Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+function paperwork(n, m) {
+    if (n < 0 || m < 0) {
+        return 0;
+    }
+    return n * m
+}
+
+result = paperwork(5, 5);
+console.log(result)    //25
+
+
+
+//19. It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+function removeChar(str) {
+    return str.slice(1, -1);
+}
+let originalString = "Hello World"
+removeChar(originalString);
+
+
+
+//20. Make a simple function called greet that returns the most-famous "hello world!".
+
+function greet() {
+    return 'hello world!'
+}
+
+let greeting = greet();
+console.log(greeting);   // 'hello world!
+
+
+
+//21. Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+function boolToWord(bool) {
+    if (bool == true) {
+        return 'Yes'
+    } else {
+        return 'No'
+    }
+}
+
+result =boolToWord(true);
+console.log(result);
+
+
+//22. Write a function that removes the spaces from the string, then return the resultant string.
+
+function noSpace(str){
+    return str.replace(/\s/g, "");
+  }
+result = noSpace('Hello World')
+console.log(result);    //HelloWorld
+
+
+
+
+
+
+
+
+
 
 
 
