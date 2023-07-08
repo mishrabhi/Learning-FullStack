@@ -266,17 +266,88 @@ function boolToWord(bool) {
     }
 }
 
-result =boolToWord(true);
+result = boolToWord(true);
 console.log(result);
 
 
 //22. Write a function that removes the spaces from the string, then return the resultant string.
 
-function noSpace(str){
+function noSpace(str) {
     return str.replace(/\s/g, "");
-  }
+}
 result = noSpace('Hello World')
 console.log(result);    //HelloWorld
+
+
+//23. Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+function fakeBin(x) {
+    var res = '';
+    for (var i = 0; i < x.length; i++) {
+        if (parseInt(x[i]) < 5) {
+            res = res + '0';
+        } else {
+            res = res + '1';
+        }
+    }
+    return res;
+
+}
+
+//24. Given an array of integers as strings and numbers, return the sum of the array values as if all were number.
+
+function sumMix(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + Number(arr[i]);
+    }
+    return sum;
+}
+var array = [1, 2, '3', '4', 5]
+result = sumMix(array);
+console.log(result);     //15
+
+
+//25. Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+function sum(numbers) {
+    if (numbers.length == 0) {
+        return 0;
+    }
+    var result = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        result = result + numbers[i]
+
+    }
+    return result;
+};
+
+var array = []
+result = sum(array);
+console.log(result);   //0
+
+
+//26.Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+var summation = function (num) {
+    var sum = 0;
+    for (var i = 1; i <= num; i++) {
+        sum = sum + i
+    }
+    return sum;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
