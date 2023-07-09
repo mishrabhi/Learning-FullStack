@@ -6,13 +6,13 @@ greet.onclick = function greetByTime(){
     let currentTime = new Date();
     let currentHour = currentTime.getHours();
     if(currentHour < 12){
-        greeting.innerText = `Good Morning ${person}`
+        greeting.innerText = `Good Morning ${person}!`
     } else if (currentHour < 16) {
-        greeting.innerText = `Good Afternoon ${person}`
+        greeting.innerText = `Good Afternoon ${person}!`
     } else if (currentHour < 22) {
-        greeting.innerText = `Good Evening ${person}`
+        greeting.innerText = `Good Evening ${person}!`
     } else {
-        greeting.innerText = `Good Night ${person}`
+        greeting.innerText = `Good Night ${person}!`
     }
 }
 
