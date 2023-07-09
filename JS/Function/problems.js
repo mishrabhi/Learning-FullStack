@@ -337,6 +337,59 @@ var summation = function (num) {
     return sum;
 }
 
+//27.Given a non-empty array of integers, return the result of multiplying the values together in order.
+
+function grow(x) {
+    let res = 1;
+    for (let i = 0; i < x.length; i++) {
+        res = res * x[i];
+    }
+    return res;
+}
+
+
+//28. Given an array of integers, return a new array with each value doubled.
+
+function maps(x) {
+    let newarr = [];
+    for (let i = 0; i < x.length; i++) {
+        newarr.push(x[i] * 2);
+    }
+    return newarr;
+}
+
+//29. You are given two interior angles (in degrees) of a triangle.
+
+//Write a function to return the 3rd.
+
+//Note: only positive integers will be tested. 
+
+function otherAngle(a, b) {
+    c = 180 - (a + b);
+    return c;
+}
+
+
+//30. You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+//If it is a square, return its area. If it is a rectangle, return its perimeter.
+//Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+
+const areaOrPerimeter = function (l, w) {
+    if (l != w) {
+        return perimeter = 2 * (l + w)
+    } else {
+        return area = l * w
+    }
+};
+
+
+//31. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+//Example:
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+
 
 
 
