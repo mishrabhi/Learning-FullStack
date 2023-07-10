@@ -241,7 +241,7 @@ function removeChar(str) {
     return str.slice(1, -1);
 }
 let originalString = "Hello World"
-removeChar(originalString);
+console.log(removeChar(originalString));    //ello Worl
 
 
 
@@ -267,7 +267,7 @@ function boolToWord(bool) {
 }
 
 result = boolToWord(true);
-console.log(result);
+console.log(result);     //Yes
 
 
 //22. Write a function that removes the spaces from the string, then return the resultant string.
@@ -291,8 +291,8 @@ function fakeBin(x) {
         }
     }
     return res;
-
 }
+console.log(fakeBin('1739'));  //0101
 
 //24. Given an array of integers as strings and numbers, return the sum of the array values as if all were number.
 
@@ -336,6 +336,7 @@ var summation = function (num) {
     }
     return sum;
 }
+console.log(summation(4))    //10
 
 //27.Given a non-empty array of integers, return the result of multiplying the values together in order.
 
@@ -346,6 +347,7 @@ function grow(x) {
     }
     return res;
 }
+console.log(grow([2,3,4]));    //24
 
 
 //28. Given an array of integers, return a new array with each value doubled.
@@ -357,6 +359,9 @@ function maps(x) {
     }
     return newarr;
 }
+console.log(maps([1,2,3,4]));      //[2,4,6,8]
+
+
 
 //29. You are given two interior angles (in degrees) of a triangle.
 
@@ -368,6 +373,8 @@ function otherAngle(a, b) {
     c = 180 - (a + b);
     return c;
 }
+
+console.log(otherAngle(70, 50));  //60
 
 
 //30. You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
@@ -382,12 +389,146 @@ const areaOrPerimeter = function (l, w) {
     }
 };
 
+console.log(areaOrPerimeter(2, 4));     //12
+
 
 //31. An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 //Example:
 // isIsogram "Dermatoglyphics" = true
 // isIsogram "moose" = false
 // isIsogram "aba" = false
+
+function isogram(str){
+    let arr = str.split('');
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i+1; j < arr.length; j++){
+            if(arr[i]==arr[j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+console.log(isogram("Dermatoglyphics"));    //true
+
+//32. Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+
+
+
+
+//33. Make a program that filters a list of strings and returns a list with only your friends name in it.
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+
+
+
+//34. Given an integer or a floating-point number, find its opposite.
+// Examples:
+// 1: -1
+// 14: -14
+
+function opposite(number) {
+    return number * -1;
+}
+console.log(opposite(3));    //-3
+
+
+//35.Take an array of integers and sum all the integers
+//Give your answer as a string matching "odd" or "even".
+
+function oddOrEven(array) {
+    let res = 0;
+    for (let i = 0; i < array.length; i++) {
+        res = res + array[i]
+    }
+    if (res % 2 == 0) {
+        return `even`
+    } else {
+        return 'odd'
+    }
+}
+console.log(oddOrEven([3,5,7]));     //odd
+
+
+//36. Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+// Examples:
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
+function solution(str, ending) {
+    return str.endsWith(ending);
+}
+
+console.log(solution('abc', 'bc'));   //true
+
+
+
+//37. Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+// Example:
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+
+
+//38. , you are asked to square every digit of a number and concatenate them.
+//For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+
+
+
+
+//39. Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+function isTriangle(a, b, c) {
+    if (a + b > c && b + c > a && c + a > b) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isTriangle(3,4,5));   //true
+
+
+//40. Given a year, return the century it is in.
+// Examples
+// 1705 --> 18
+// 1900 --> 19
+// 1601 --> 17
+// 2000 --> 20
+
+function century(year) {
+    let century = Math.ceil(year / 100);
+    return century;
+}
+console.log(century(1900));    //19
+ 
+
+//41. Given an integral number, determine if it's a square number:
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+
+var isSquare = function(n){
+    let squareRoot = Math.sqrt(n);
+    if (Number.isInteger(squareRoot)){
+      return true;
+    } else {
+      return false;
+    }
+}
+
+
+
+
+
+
 
 
 
