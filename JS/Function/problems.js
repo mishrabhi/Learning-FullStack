@@ -413,6 +413,14 @@ function isogram(str){
 console.log(isogram("Dermatoglyphics"));    //true
 
 //32. Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+/**
+ * Number Can be converted in str
+ * Str can be splited in an array
+ * Loop the array in reverse manner
+ * Keep storing the values in new Array
+ * 
+ * 
+ */
 
 
 
@@ -421,7 +429,7 @@ console.log(isogram("Dermatoglyphics"));    //true
 //33. Make a program that filters a list of strings and returns a list with only your friends name in it.
 // If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
 // Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
-
+//use filter
 
 
 
@@ -473,10 +481,28 @@ console.log(solution('abc', 'bc'));   //true
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
+// function capital(str){
+//     let arr = str.split(' ');
+//     let newArr = []
+//     for(let i = 0; i < arr.length; i++){
+//         // let firstLetter = arr[i][0].toUpperCase();
+       
+//         let final = arr[i][0].toUpperCase()+arr[i].substr(1);
+//         newArr.push(final)
+//     }
+//     return newArr.join(' ')
+// };
+
+// function capital(str){
+//     return str.split(' ').map((ele) => ele[0].toUpperCase()+ele.substr(1)).join(' ')
+// };
+
+let capitalFirstChar = str => str.split(' ').map(ele => ele[0].toUpperCase()+ele.substr(1)).join(' ')
+console.log(capitalFirstChar("How can mirrors be real if our eyes aren't real"))   
 
 
 //38. , you are asked to square every digit of a number and concatenate them.
-//For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+//For example, if we run 9119 through the function, 811181 will come out, because 9 is 81 and 1 is 1. (81-1-1-81)
 
 
 
@@ -523,6 +549,58 @@ var isSquare = function(n){
       return false;
     }
 }
+
+
+//42. Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+//The binary number returned should be a string.
+
+function addBinary(a,b){
+    let sum = a + b;
+    return sum.toString(2);
+}
+console.log(addBinary(2,4));    //110
+
+
+//43. Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+//Note: a and b are not ordered!
+
+function getSum(a, b){
+    if (a == b){
+      return a;
+    }
+    
+    let start = Math.min(a,b);
+    let end = Math.max(a,b);
+    
+    let sum = 0;
+    for(let i = start; i <= end; i++){
+      sum += i;
+    }
+    return sum;
+    
+}
+console.log(getSum(2,5));     //14
+
+
+
+//44.ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+//If the function is passed a valid PIN string, return true, else return false.
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+
+
+
+
+
+//45.
+
+
+
+
+
 
 
 
