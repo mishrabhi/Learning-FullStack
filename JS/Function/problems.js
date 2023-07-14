@@ -595,7 +595,24 @@ console.log(getSum(2,5));     //14
 
 
 
-//45.
+
+
+
+//45.  We need a function that can transform a number (integer) into a string.
+function numberToString(num) {
+    return num.toString();
+}
+console.log(numberToString(25))     //"25"
+
+
+
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+// Examples input/output:
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+
+
 
 
 
