@@ -347,7 +347,7 @@ function grow(x) {
     }
     return res;
 }
-console.log(grow([2,3,4]));    //24
+console.log(grow([2, 3, 4]));    //24
 
 
 //28. Given an array of integers, return a new array with each value doubled.
@@ -359,7 +359,7 @@ function maps(x) {
     }
     return newarr;
 }
-console.log(maps([1,2,3,4]));      //[2,4,6,8]
+console.log(maps([1, 2, 3, 4]));      //[2,4,6,8]
 
 
 
@@ -398,11 +398,11 @@ console.log(areaOrPerimeter(2, 4));     //12
 // isIsogram "moose" = false
 // isIsogram "aba" = false
 
-function isogram(str){
+function isogram(str) {
     let arr = str.split('');
-    for(let i = 0; i < arr.length; i++){
-        for(let j = i+1; j < arr.length; j++){
-            if(arr[i]==arr[j]){
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
                 return false;
             }
         }
@@ -458,7 +458,7 @@ function oddOrEven(array) {
         return 'odd'
     }
 }
-console.log(oddOrEven([3,5,7]));     //odd
+console.log(oddOrEven([3, 5, 7]));     //odd
 
 
 //36. Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
@@ -486,7 +486,7 @@ console.log(solution('abc', 'bc'));   //true
 //     let newArr = []
 //     for(let i = 0; i < arr.length; i++){
 //         // let firstLetter = arr[i][0].toUpperCase();
-       
+
 //         let final = arr[i][0].toUpperCase()+arr[i].substr(1);
 //         newArr.push(final)
 //     }
@@ -497,8 +497,8 @@ console.log(solution('abc', 'bc'));   //true
 //     return str.split(' ').map((ele) => ele[0].toUpperCase()+ele.substr(1)).join(' ')
 // };
 
-let capitalFirstChar = str => str.split(' ').map(ele => ele[0].toUpperCase()+ele.substr(1)).join(' ')
-console.log(capitalFirstChar("How can mirrors be real if our eyes aren't real"))   
+let capitalFirstChar = str => str.split(' ').map(ele => ele[0].toUpperCase() + ele.substr(1)).join(' ')
+console.log(capitalFirstChar("How can mirrors be real if our eyes aren't real"))
 
 
 //38. , you are asked to square every digit of a number and concatenate them.
@@ -517,7 +517,7 @@ function isTriangle(a, b, c) {
         return false;
     }
 }
-console.log(isTriangle(3,4,5));   //true
+console.log(isTriangle(3, 4, 5));   //true
 
 
 //40. Given a year, return the century it is in.
@@ -532,7 +532,7 @@ function century(year) {
     return century;
 }
 console.log(century(1900));    //19
- 
+
 
 //41. Given an integral number, determine if it's a square number:
 // Examples
@@ -541,12 +541,12 @@ console.log(century(1900));    //19
 //  3  =>  false
 //  4  =>  true
 
-var isSquare = function(n){
+var isSquare = function (n) {
     let squareRoot = Math.sqrt(n);
-    if (Number.isInteger(squareRoot)){
-      return true;
+    if (Number.isInteger(squareRoot)) {
+        return true;
     } else {
-      return false;
+        return false;
     }
 }
 
@@ -554,32 +554,32 @@ var isSquare = function(n){
 //42. Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 //The binary number returned should be a string.
 
-function addBinary(a,b){
+function addBinary(a, b) {
     let sum = a + b;
     return sum.toString(2);
 }
-console.log(addBinary(2,4));    //110
+console.log(addBinary(2, 4));    //110
 
 
 //43. Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
 //Note: a and b are not ordered!
 
-function getSum(a, b){
-    if (a == b){
-      return a;
+function getSum(a, b) {
+    if (a == b) {
+        return a;
     }
-    
-    let start = Math.min(a,b);
-    let end = Math.max(a,b);
-    
+
+    let start = Math.min(a, b);
+    let end = Math.max(a, b);
+
     let sum = 0;
-    for(let i = start; i <= end; i++){
-      sum += i;
+    for (let i = start; i <= end; i++) {
+        sum += i;
     }
     return sum;
-    
+
 }
-console.log(getSum(2,5));     //14
+console.log(getSum(2, 5));     //14
 
 
 
@@ -606,11 +606,76 @@ console.log(numberToString(25))     //"25"
 
 
 
-// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+//46. Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
 // Examples input/output:
 // XO("ooxx") => true
 // XO("xooxx") => false
 // XO("ooxXm") => true
+
+
+
+//47. Your task is to create a function that does four basic mathematical operations.
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+
+function basicOp(operation, value1, value2) {
+    switch (operation) {
+        case '+':
+            return value1 + value2;
+        case '-':
+            return value1 - value2;
+        case '*':
+            return value1 * value2;
+        case '/':
+            return value1 / value2;
+        default:
+            return NaN;
+    }
+}
+console.log(basicOp('+', 3, 8));    //11
+
+
+//48. Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+// Examples (input -> output)
+// 6, "I"     -> "IIIIII"
+
+function repeatStr(n, s) {
+    if (n <= 0) {
+        return "";
+    }
+
+    let repeatedString = "";
+    for (let i = 0; i < n; i++) {
+        repeatedString += s;
+    }
+    return repeatedString;
+}
+console.log(repeatStr(4, 'hello'));     //hellohellohellohello
+
+
+
+//49. Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
+console.log(disemvowel('hello I am Abhishek'));   //hll  m bhshk
+
+
+//50. Write a function named setAlarm. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+// employed | vacation 
+// true     | true     => false
+
+function setAlarm(employed, vacation){
+    return employed && !vacation;
+}
+console.log(setAlarm('true', 'true'));   //false
+
+
 
 
 
