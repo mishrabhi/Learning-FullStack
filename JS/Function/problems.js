@@ -614,6 +614,8 @@ console.log(numberToString(25))     //"25"
 
 
 
+
+
 //47. Your task is to create a function that does four basic mathematical operations.
 // The function should take three arguments - operation(string/char), value1(number), value2(number).
 // The function should return result of numbers after applying the chosen operation.
@@ -635,6 +637,7 @@ function basicOp(operation, value1, value2) {
     }
 }
 console.log(basicOp('+', 3, 8));    //11
+
 
 
 //48. Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
@@ -670,10 +673,27 @@ console.log(disemvowel('hello I am Abhishek'));   //hll  m bhshk
 // employed | vacation 
 // true     | true     => false
 
-function setAlarm(employed, vacation){
+function setAlarm(employed, vacation) {
     return employed && !vacation;
 }
 console.log(setAlarm('true', 'true'));   //false
+
+
+//51. Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+function doubleChar(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        result += str[i] + str[i];
+    }
+    return result;
+}
+console.log(doubleChar('hello'));       //hheelllloo
+
+
+//52. Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
 
 
 
