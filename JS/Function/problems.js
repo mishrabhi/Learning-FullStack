@@ -697,6 +697,27 @@ console.log(doubleChar('hello'));       //hheelllloo
 
 
 
+//53. Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+const binaryArrayToNumber = arr => {
+    const binaryString = arr.join('');
+    const decimalVal = parseInt(binaryString, 2);
+    return decimalVal;
+};
+
+console.log(binaryArrayToNumber([0, 0, 0, 1]));      //1
+
+
+//54. Write a function to split a string and convert it into an array of words.
+
+function stringToArray(string) {
+    let arrayOfWords = string.split(' ');
+
+    return arrayOfWords;
+}
+
+
+
 
 
 
