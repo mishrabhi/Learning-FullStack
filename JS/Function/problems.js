@@ -715,6 +715,7 @@ function stringToArray(string) {
 
     return arrayOfWords;
 }
+console.log(stringToArray('Abhi'));    // [ 'Abhi' ]
 
 
 //55. You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
@@ -728,6 +729,19 @@ function getMiddle(s) {
         return s.charAt(middleIndex)
     }
 }
+console.log(getMiddle('Abhisheks'));    //s
+
+
+//56. Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+    return s.replace(/!/g, '');
+}
+
+console.log(removeExclamationMarks('he!!llo!'));     //hello
+
+
+
 
 
 
