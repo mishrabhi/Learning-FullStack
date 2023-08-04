@@ -10,6 +10,7 @@ function loadSearchedGif(e){
     displayImg.innerHTML = '';
     function handleResponse() {
         if(xhr.readyState < 4){
+            console.log('XHR readystate',xhr.readyState)
             return;
         }
         let responseData = JSON.parse(xhr.responseText).data;
@@ -21,6 +22,7 @@ function loadSearchedGif(e){
             displayImg.appendChild(img);
         });
     }
+    console.log('Waiting for ready state to update')
     xhr.open('GET', url, true);
 
     xhr.send();
