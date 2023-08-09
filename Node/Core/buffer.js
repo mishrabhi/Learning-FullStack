@@ -22,3 +22,6 @@ console.log(Buffer.isBuffer(buf));     //true
 const buffer_array = Buffer.from([8, 6, 7, 5, 3, 0, 9]);   
 
 
+// let arr = Uint8Array
+
+console.log(arr)

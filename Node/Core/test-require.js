@@ -10,3 +10,26 @@
 
 // module.exports is returned by require().
 
+
+//import syntax:
+// import globalImport from './global';
+
+const globalImport = require('./global')
+
+// import { add } from './global'
+
+console.log(globalImport.hello);
+
+// let fromBasicModule = require("./global") //it returns exports object of that file
+
+// console.log(fromBasicModule)
+
+let squaredValue = globalImport.square(10)
+console.log(squaredValue)
+
+//importing single property
+
+const square = require('./global').square
+
+console.log(square(2));
+

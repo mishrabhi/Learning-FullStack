@@ -6,6 +6,8 @@
 
 // In Node there is a global object (global or GLOBAL), you spell it lowercase or uppercase and it has a lot of properties.
 
+console.log(global);
+
 
 // Ex. __filename which gives the absolute path and then the file name
 // __dirname will get you only the path of the currently runing script.
@@ -24,11 +26,10 @@ console.log(__filename);    // C:\Programming\Learning-FullStack\Node\Core\globa
 // A module is a discrete program, contained in a single file in Node.js. Modules are therefore tied to files, with one module per file.
 
 // Under the covers, the module keeps track of itself through an object named module. Inside each module, therefore, 'module' refers to the object representing the current module. This object holds metadata about the module.
+console.log(module);
 
-console.log(module.filename);
-console.log(module.id);
-console.log(module.exports);
-console.log('hi');
+module.name = "Learning module"
+
 
 
 // module.exports
@@ -37,7 +38,24 @@ console.log('hi');
 // In node.js terminolgy, module.exports defines the values that the module exports.
 // Remember that 'exporting' is simply making objects or values available for other modules to import and use.
 
+console.log(module.exports);
 
+module.exports.hello = "testing export"
+console.log(module);
+
+module.exports.square = function (n) {
+    return n*n
+}
+
+function add(a,b){
+    return a + b
+}
+
+console.log(module);
+
+module.exports.add = add;
+
+exports.newVal = 20;
 
 
 

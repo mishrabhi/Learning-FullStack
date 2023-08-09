@@ -26,6 +26,7 @@
             * Math
             * Date
         * Error Handling
+        * Callback & Promise
     * Browser Side
         * BOM
             * Navigator
@@ -33,6 +34,7 @@
             * History
             * Screen
             * Timing Functions
+            * Window Functions
         * DOM
             * DOM Traversal
             * Access Element
@@ -47,6 +49,25 @@
                 * Form Events
                 * Event Bubbling
                 * Event Capturing
+                * Modify text
+    * Node-JS
+        * Core
+            * Global
+            * Timing-function
+            * Require
+            * Buffer
+        * FS
+            * path
+            * readFile
+            * writeFile
+            * createReadStream
+            * createWriteStream
+            * pipeing
+                * http
+                * server-demo
+
+
+                
 
 
 
