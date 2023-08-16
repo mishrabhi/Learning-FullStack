@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Welcome {{name}}</h1>
+            <p><b>Age: </b> {{description.age}}</p>
+            <p><b>Gender: </b> {{description:gender}} </p>
+            {{#if age}}
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum adipisci, animi quia rem odio dolore, eveniet tenetur molestiae eius explicabo laborum perferendis! Modi vitae possimus necessitatibus, laudantium ipsam quas unde?</p>
+            {{else}}
+            <p>You are below Age Limit</p>
+            {{/if}}
+            {{{htmlContent}}}
+
+            <h2>Hobbies</h2>
+            <ul>
+                {{#each hobbies}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+
+            <h3>Friends</h3>
+            {{#each friends}}
+            <div>
+                <p><b>Name:</b> {{this.name}}</p>
+                <p><b>Gender:</b>{{this.gender}}</p>
+            </div>
+            {{/each}}
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+{{> blog }}
