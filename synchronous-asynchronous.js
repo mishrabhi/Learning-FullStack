@@ -14,4 +14,4 @@ console.log('Program Ends')
 
 setTimeout(function() {
     console.log('Hello World')
-},1000)
+},1000);

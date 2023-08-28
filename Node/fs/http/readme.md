@@ -86,7 +86,7 @@ Each request can be modeled as doing a specific action on a resource. For exampl
 
 ### DELETE
 
-* Used to perform partial update of a resource.
+* Removes the resource at the specified URI.
 
 ## Status Code
 
